@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		190C8BAE1BEAADCC00CD505E /* RNOpenSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 190C8BAD1BEAADCC00CD505E /* RNOpenSettings.h */; };
 		190C8BB01BEAADCC00CD505E /* RNOpenSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 190C8BAF1BEAADCC00CD505E /* RNOpenSettings.m */; };
+		967D3CBB2032AC1600769179 /* RCTConverter+RNOSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D3CBA2032AC1600769179 /* RCTConverter+RNOSStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		190C8BAA1BEAADCC00CD505E /* libReact Native Open Settings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libReact Native Open Settings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190C8BAD1BEAADCC00CD505E /* RNOpenSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNOpenSettings.h; sourceTree = "<group>"; };
 		190C8BAF1BEAADCC00CD505E /* RNOpenSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNOpenSettings.m; sourceTree = "<group>"; };
+		967D3CB92032AB0000769179 /* RCTConverter+RNOSStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTConverter+RNOSStatus.h"; sourceTree = "<group>"; };
+		967D3CBA2032AC1600769179 /* RCTConverter+RNOSStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTConverter+RNOSStatus.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 		190C8BA11BEAADCC00CD505E = {
 			isa = PBXGroup;
 			children = (
+				967D3CB92032AB0000769179 /* RCTConverter+RNOSStatus.h */,
+				967D3CBA2032AC1600769179 /* RCTConverter+RNOSStatus.m */,
 				190C8BAD1BEAADCC00CD505E /* RNOpenSettings.h */,
 				190C8BAF1BEAADCC00CD505E /* RNOpenSettings.m */,
 				190C8BAB1BEAADCC00CD505E /* Products */,
@@ -114,6 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967D3CBB2032AC1600769179 /* RCTConverter+RNOSStatus.m in Sources */,
 				190C8BB01BEAADCC00CD505E /* RNOpenSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
