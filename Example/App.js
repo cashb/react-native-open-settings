@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import OpenSettings from 'react-native-open-settings';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -32,6 +33,21 @@ export default class App extends Component<Props> {
         </Text>
         <Text style={styles.instructions}>
           {instructions}
+        </Text>
+        <Text onPress={() => OpenSettings.openSettings()}>
+          Open Settings.
+        </Text>
+        <Text onPress={() => OpenSettings.openSettingsFor("location")}>
+          Open Settings for location.
+        </Text>
+        <Text onPress={() => OpenSettings.openSettingsFor("notification")}>
+          Open Settings for notification.
+        </Text>
+        <Text onPress={() => OpenSettings.openSettingsFor("bluetooth")}>
+          Open Settings for bluetooth.
+        </Text>
+        <Text onPress={() => OpenSettings.openSettingsFor("backgroundRefresh")}>
+          Open Settings for background app refresh.
         </Text>
       </View>
     );
