@@ -9,7 +9,20 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 public class OpenSettings extends ReactContextBaseJavaModule {
+
+    private static final Map<String, String> actions;
+    static {
+        Map<String, String> m = new HashMap<>();
+        m.put("bluetooth", android.provider.Settings.ACTION_BLUETOOTH_SETTINGS);
+        m.put("location", android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+        actions = Collections.unmodifiableMap(m);
+    }
+    
 
     private ReactContext reactContext;
 
@@ -33,6 +46,16 @@ public class OpenSettings extends ReactContextBaseJavaModule {
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        reactContext.startActivity(i);
+    }
+
+    @ReactMethod
+    public void openSettingsFor(String type) {
+        final String action = actions.get(type);
+        if (action == null) return;
+
+        final Intent i = new Intent();
+        i.setAction(action);
         reactContext.startActivity(i);
     }
     //endregion
