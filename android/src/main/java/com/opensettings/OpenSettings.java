@@ -18,8 +18,8 @@ public class OpenSettings extends ReactContextBaseJavaModule {
     private static final Map<String, String> actions;
     static {
         Map<String, String> m = new HashMap<>();
-        m.put("bluetooth", android.provider.Settings.ACTION_BLUETOOTH_SETTINGS);
-        m.put("location", android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+        m.put("bluetooth", Settings.ACTION_BLUETOOTH_SETTINGS);
+        m.put("location", Settings.ACTION_LOCATION_SOURCE_SETTINGS);
         actions = Collections.unmodifiableMap(m);
     }
     
@@ -56,6 +56,9 @@ public class OpenSettings extends ReactContextBaseJavaModule {
 
         final Intent i = new Intent();
         i.setAction(action);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
         reactContext.startActivity(i);
     }
     //endregion
